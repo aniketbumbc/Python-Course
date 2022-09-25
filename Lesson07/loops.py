@@ -10,7 +10,6 @@ num = 1
 
 
 # For loop
-
 users = ["Dave", "Jhon", "Sara"]
 habits = ["Eats", "Sleeps", "Work"]
 
