@@ -23,3 +23,5 @@ print(age == 10)
 print(age != 10)
 print(not age)
 print("Hello Bunny") if (age == 222) else print("Something goes wrong")
+
+# https://www.youtube.com/watch?v=H2EJuAcrZYU
