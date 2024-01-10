@@ -54,3 +54,6 @@ mack.get_make_model()
 
 small_car.moves()
 small_car.get_make_model()
+
+
+# Plolymorphrism
