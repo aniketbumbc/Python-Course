@@ -58,7 +58,7 @@ class Addition:
 
 class Multipication:
     def multi(self, a, b):
-        multipy = a * b
+        multipy = a * b8og
         print("Multipication is ", multipy)
 
 
