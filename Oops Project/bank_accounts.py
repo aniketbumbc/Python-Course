@@ -32,3 +32,34 @@ class BankAccount:
             self.getBalace()
         except BalanaceException as error:
             print(f"\n Withdraw interrupted: {error}")
+
+    def transfer(self, amount, account):
+        try:
+            print('\n***************\n\n Begining Transfer 🎉')
+            self.vaiableTranscation(amount)
+            self.withDraw(amount)
+            account.deposite(amount)
+            print('\n****\n\n Transfer Complete ✅')
+        except BalanaceException as error:
+            print(f'\n Transfer interrupted... {error} ❌')
+
+
+class InterestRewardAccount(BankAccount):
+    def deposite(self, amount):
+        self.balance = self.balance + amount + (amount * 1.05)
+        print(f'Deposite Compelete ****')
+        self.getBalace()
+
+
+class SavingAccount(InterestRewardAccount):
+    def __init__(self, initialAmount, accountName):
+        super().__init__(initialAmount, accountName)
+        self.fee = 5
+
+    def withDraw(self, amount):
+        try:
+            self.vaiableTranscation(amount + self.fee)
+            self.balance = self.balance - (amount + self.fee)
+            print("\n WithDraw Complete")
+        except BalanaceException as error:
+            print(f'With Draw Interupted: {error}')
