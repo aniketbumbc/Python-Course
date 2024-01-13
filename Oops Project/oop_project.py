@@ -24,3 +24,4 @@ Blaze.getBalace()
 Blaze.deposite(1000)
 
 Blaze.transfer(4000, Dave)
+Blaze.getBalace()
