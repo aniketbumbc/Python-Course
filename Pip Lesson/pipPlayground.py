@@ -20,9 +20,11 @@ def current_weather():
     city = input("\n Please enter city name: \n")
     request_url = f'https://api.openweathermap.org/data/2.5/weather?appid={
         os.getenv("API_KEY")}&q={city}&units=metric'
-
+    print(request_url)
     weather_data = requests.get(request_url).json()
-    pprint(weather_data)
+    pprint(f'\nThe current city name is {weather_data["name"]}')
+    pprint(f'\nThe current weather temperature is {
+           weather_data["main"]['temp']}')
 
 
 current_weather()
