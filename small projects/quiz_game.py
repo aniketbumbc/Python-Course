@@ -30,4 +30,5 @@ if answer == "random access memory":
 else:
     print("Incorrect !!! ❌")
 
-print(f"You got {score} questions correct 🥳🥳🥳")
+print(f"You got {score} questions correct 🥳🥳🥳 \n")
+print(f"You got {(score / 3) * 100:2f} % correct 🤩")
