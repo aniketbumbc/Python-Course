@@ -21,3 +21,12 @@ print(New_Castle.head())
 merge_data = New_Castle.merge(sales, on="DayOfMonth")
 
 print(merge_data.head())
+
+
+state = pd.read_csv('locationsandstates.csv', header=0)
+
+print(state.head())
+
+state_data = data.merge(state, on="Location", how="left")
+
+print(state_data.head())
