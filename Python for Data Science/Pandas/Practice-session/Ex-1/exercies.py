@@ -79,10 +79,13 @@ new_data = pd.DataFrame(dic_data)
 
 # print(new_data)
 
-info_data = info_data.drop(['Instrument status'], axis=1)
+# info_data = info_data.drop(['Instrument status'], axis=1)
 
-instrument_data = pd.concat([info_data, new_data], axis=1)
 
+instrument_data = info_data.merge(new_data, on="Instrument status", how="left")
+
+
+print(instrument_data.head())
 
 # 6. Time series Year, day , month
 
@@ -95,4 +98,4 @@ instrument_data['Date'] = instrument_data["Day"] = pd.DatetimeIndex(
 instrument_data['Hour'] = instrument_data["Measurement date"] = pd.DatetimeIndex(
     instrument_data["Date"]).hour
 
-print(instrument_data.head())
+# print(instrument_data.head())
