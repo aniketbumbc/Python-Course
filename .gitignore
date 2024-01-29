@@ -3,3 +3,4 @@ Pip Lesson/.venv
 Pip Lesson/.env
 Project/.venv
 Project/.env
+*.csv
