@@ -32,7 +32,6 @@ new_movies = movies_data.drop(['color',
 
 # print(new_movies.shape[1])
 
-
 # 4 . Which column has the highest percentage of null values?
 
 count_null_value = (movies_data.isnull().sum().sum())
