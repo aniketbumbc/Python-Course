@@ -30,9 +30,12 @@ print(is_new_patient)
 # age = 2020 - int(birth_year)  # convert into string
 # print(age)
 
-# python string
+# python string dynamic string
 
 msg = 'hello how are you'
 print(msg[2])
 print(msg[0:3])
 print(msg[:])
+end_msg = " I am good"
+
+print(f'{msg}? Yes{end_msg}')
