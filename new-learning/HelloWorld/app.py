@@ -59,26 +59,51 @@ y = 20.6
 
 # if statement
 
-is_hot = ""
-is_cold = ""
+# is_hot = ""
+# is_cold = ""
 
-if is_hot:
-    print("It's hot day")
-    print("It's enjoy your day")
-elif is_cold:
-    print('Wear raincoat')
-else:
-    print('Sleep with AC ON')
+# if is_hot:
+#     print("It's hot day")
+#     print("It's enjoy your day")
+# elif is_cold:
+#     print('Wear raincoat')
+# else:
+#     print('Sleep with AC ON')
 
 # logical operator ie AND, OR , NOT
 
 # convert pound weight or kg weight
-weight = int(input("Please Enter you weight: "))
-pound_or_kg = input("please enter l for pound and k: ")
+# weight = int(input("Please Enter you weight: "))
+# pound_or_kg = input("please enter l for pound and k: ")
 
-if pound_or_kg == 'k' or pound_or_kg == 'K':
-    print(f"{weight / 2} Lbs")
-elif pound_or_kg == 'l' or pound_or_kg == 'L':
-    print(f"{weight*2} Kg")
+# if pound_or_kg == 'k' or pound_or_kg == 'K':
+#     print(f"{weight / 2} Lbs")
+# elif pound_or_kg == 'l' or pound_or_kg == 'L':
+#     print(f"{weight*2} Kg")
+# else:
+#     print("You enter wrong char")
+
+# while loop
+# i = 1
+# while i <= 5:
+#     print("*" * i)
+#     i += 1
+# print("Done")
+
+# Game while loop
+
+exitNumber = 9
+counter = 1
+while counter <= 3:
+    guessNumber = int(input("Guess: "))
+    if(guessNumber != exitNumber):
+        counter += 1
+    if(guessNumber == exitNumber):
+        print("You won")
+        break
 else:
-    print("You enter wrong char")
+    print("You Fail")
+
+# guessNumber = (input("Guess: "))
+
+# print(type(guessNumber))
