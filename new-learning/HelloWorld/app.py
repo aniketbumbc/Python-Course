@@ -92,18 +92,34 @@ y = 20.6
 
 # Game while loop
 
-exitNumber = 9
-counter = 1
-while counter <= 3:
-    guessNumber = int(input("Guess: "))
-    if(guessNumber != exitNumber):
-        counter += 1
-    if(guessNumber == exitNumber):
-        print("You won")
-        break
-else:
-    print("You Fail")
+# exitNumber = 9
+# counter = 1
+# while counter <= 3:
+#     guessNumber = int(input("Guess: "))
+#     if(guessNumber != exitNumber):
+#         counter += 1
+#     if(guessNumber == exitNumber):
+#         print("You won")
+#         break
+# else:
+# print("You Fail")
 
 # guessNumber = (input("Guess: "))
 
 # print(type(guessNumber))
+
+print("Welcome to car game")
+
+input_text = ""
+while input_text != "quit":
+    input_text = input("")
+    if input_text == 'start':
+        print("Yes you can play car game")
+    elif input_text == 'stop':
+        print("You can stop the game now")
+    elif input_text == 'quit':
+        print("This time quit the game")
+    elif input_text == "help":
+        print('start - to start the car')
+        print('stop - to stop the car')
+        print('quit - to exit')
