@@ -61,4 +61,33 @@
 #         unique_list.append(item)
 # print(unique_list)
 
-# tuple
+# tuples
+# simpler to list can not change it or add or delete from it
+
+# count method returns the number of times a specified value appears in the tuple.
+
+# numbers = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+# print(numbers.count(7))
+# print(numbers.index(8))
+
+# unpacking
+
+# coordinates = (1, 3, 7, 8)
+# a, s, d, f = coordinates
+# print(a, s, d, f)
+
+# disctorinies like key, value pair
+
+customer = {
+    "name": "Mike",
+    "age": 23,
+    "city": "Baltimore",
+    "is_verify": True
+}
+
+print(customer)
+print(type(customer))
+print(customer['age'])
+print(customer.get('is_verifyw'))
+customer["school"] = "UMBC"
+print(customer)
