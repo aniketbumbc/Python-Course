@@ -40,8 +40,16 @@ def emojiConvertor(message):
     return output
 
 
-print(
-    emojiConvertor("hello aniket :)"))
+# print(
+#     emojiConvertor("hello aniket :)"))
 
-print(
-    emojiConvertor("hello aniket (:"))
+# print(
+#     emojiConvertor("hello aniket (:"))
+
+# Exception
+
+try:
+    age = int(input('Age: '))
+    print(age)
+except ValueError:
+    print("Invalid Value")
