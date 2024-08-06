@@ -78,16 +78,16 @@
 
 # disctorinies like key, value pair
 
-customer = {
-    "name": "Mike",
-    "age": 23,
-    "city": "Baltimore",
-    "is_verify": True
-}
+# customer = {
+#     "name": "Mike",
+#     "age": 23,
+#     "city": "Baltimore",
+#     "is_verify": True
+# }
 
-print(customer)
-print(type(customer))
-print(customer['age'])
-print(customer.get('is_verifyw'))
-customer["school"] = "UMBC"
-print(customer)
+# print(customer)
+# print(type(customer))
+# print(customer['age'])
+# print(customer.get('is_verifyw'))
+# customer["school"] = "UMBC"
+# print(customer)
