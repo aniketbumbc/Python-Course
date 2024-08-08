@@ -1,6 +1,7 @@
 # class Dice
 # Method Roll return tuple of two random values
 import random
+from pathlib import Path
 
 
 class Dice:
@@ -11,5 +12,10 @@ class Dice:
         print("Rolling Dice Value: ", dice_value)
 
 
-d1 = Dice()
-d1.Roll()
+# d1 = Dice()
+# d1.Roll()
+
+path = Path()
+
+for file in path.glob('*.py'):
+    print(file)

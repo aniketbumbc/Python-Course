@@ -1,13 +1,16 @@
 from convertor import convert_into_lbs, convert_into_kg, find_max_number
 from ecommerce.shipping import shipping
 import random
+from pathlib import Path
 
-print(convert_into_lbs(23))
-print(convert_into_kg(100))
+# print(convert_into_lbs(23))
+# print(convert_into_kg(100))
 
-print(find_max_number([3, 5, 6, 66, 100, 2333]))
+# print(find_max_number([3, 5, 6, 66, 100, 2333]))
 
-shipping()
+# shipping()
 
-for i in range(0, 5):
-    print(random.randrange(5, 10))
+# for i in range(0, 5):
+#     print(random.randrange(5, 10))
+path = Path("email")
+print(path.rmdir())
