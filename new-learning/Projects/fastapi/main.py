@@ -29,15 +29,11 @@ def find_post(id):
             return p
 
 
-def find_index_remove(id):
-    print("Id from index Up", id)
+def find_index_post(id):
     for obj in my_posts:
-        print("obj", obj)
         if (obj['id'] == id):
             ele_index = my_posts.index(obj)
-            print("If ele_index Up", ele_index)
-            my_posts.pop(ele_index)
-            return obj["id"]
+            return ele_index
 
 
 @app.get("/")
@@ -78,11 +74,25 @@ def get_single_post(id: int, resp: Response):
 
 @app.delete("/posts/{id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_post(id: int):
-    print("main delete app", find_index_remove(int(id)) == None)
-    print("main delete app : 2", find_index_remove(int(id)))
-    if find_index_remove(int(id)) == None:
-        print("main delete if condition")
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST, detail=f'wrong post is {id}')
+    index = find_index_post(id)
 
+    if (index == None):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, detail=f'wrong post with id {id}')
+
+    my_posts.pop(index)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
+@app.put("/posts/{id}")
+def updatePost(id: int, post: Post):
+    index = find_index_post(id)
+
+    if (index == None):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, detail=f'wrong post with id {id}')
+
+    post_dict = post.dict()
+    post_dict['id'] = id
+    my_posts[index] = post_dict
+    return {"data": post_dict}
