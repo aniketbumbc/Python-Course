@@ -1,0 +1,2 @@
+source vfastapi/bin/activate 
+uvicorn main:app --reload    
