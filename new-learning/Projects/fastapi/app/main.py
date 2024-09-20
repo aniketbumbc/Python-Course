@@ -105,6 +105,8 @@ def delete_post(id: int):
 
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
+# update single post
+
 
 @app.put("/posts/{id}")
 def updatePost(id: int, post: Post):
